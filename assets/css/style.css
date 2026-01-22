@@ -1,0 +1,459 @@
+body {
+    background-color: rgb(37, 164, 203);  /* Default Theme Color */
+    color: rgb(244, 250, 247);
+    transition: background-color 0.3s, color 0.3s;
+}
+/*
+.light-theme {
+    background-color: #7ad7ef; /* Light Theme Color - Yellow 
+    color: rgb(14, 8, 8)
+}*/
+.banner {
+    background-size: 80px;
+    height: 80px;
+    color: rgb(20, 16, 16);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.faq-section {
+    background-color: #ffffff;
+    color: #000000; /* For better readability */
+    padding: 50px 0;
+}
+#map { height: 300px; }
+.search-bar {
+    margin-bottom: 20px;
+}
+.social-media {
+    margin-top: 10px;
+}
+
+.hamburger-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 1050;
+}
+
+/* Add space so hamburger doesn’t overlap search */
+.search-bar {
+  padding-top: 28px;
+}
+
+@media (min-width: 992px) {
+  .hamburger-btn {
+    display: none;
+  }
+  .search-bar {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* Next Update 
+.theme-toggle {
+    margin-left: 15px;
+}
+/* Switch Styles 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+} */
+
+/* Banner Section */
+.home-banner {
+    width: 100%;
+    background-color: #0c0a0a;
+}
+
+/* Banner Slide */
+.banner-slide {
+    height: 600px; /* Recommended hero height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+/* Logo Image */
+.banner-logo {
+    max-width: 80%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Controls Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* black arrows on white bg */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .banner-slide {
+        height: 420px;
+    }
+
+    .banner-logo {
+        max-height: 220px;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.home-banner {
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-slide {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.banner-text {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #000000;
+}
+
+.banner-logo {
+    max-width: 75%;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 1.4rem;
+        padding: 0 20px;
+    }
+}
+
+/* ================= GLASSMORPHISM SERVICE CARDS ================= */
+.service-card {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+   /* DARKER SHADOW */
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22),
+    0 4px 12px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* HOVER LIFT */
+.service-card:hover {
+  transform: translateY(-8px) scale(1.01);
+   box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.35),
+    0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE EFFECT */
+.service-card img {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ================= TAB FADE + SLIDE ANIMATION ================= */
+.tab-pane {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= OPTIONAL: SMOOTHER TABS ================= */
+.nav-tabs .nav-link,
+.nav-pills .nav-link {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= DENTAL SERVICES GRID ================= */
+.dental-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Service tab buttons */
+.service-link {
+  width: 100%;
+  text-align: center;
+  padding: 8px 6px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+ /* DARKER SHADOW */
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22),
+    0 4px 12px rgba(0, 0, 0, 0.18);
+  color: #0d6efd;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover */
+.service-link:hover {
+  transform: translateY(-3px);
+  background: rgba(13, 110, 253, 0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Active service */
+.service-link.active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+  box-shadow: 0 8px 22px rgba(13, 110, 253, 0.45);
+}
+
+
+
+/* Tablet */
+@media (min-width: 768px) {
+  .dental-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .dental-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+.faq-card {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(14, 9, 9, 0.3);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* HOVER LIFT */
+.faq-card:hover {
+  transform: translateY(-8px) scale(1.01);
+   box-shadow:
+    0 17px 35px rgba(131, 126, 126, 0.35),
+    0 0px 10px rgba(96, 92, 92, 0.25);
+}
+/* =========================================================
+   LEAFLET MAP STYLES
+   ========================================================= */
+
+#leafletMap {
+  width: 100%;
+  height: 400px;
+  margin-top: 3rem;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile height adjustment */
+@media (max-width: 768px) {
+  #leafletMap {
+    height: 300px;
+  }
+}
+
+.leaflet-container {
+  font-family: inherit;
+  border-radius: 14px;
+}
+
+/* Leaflet popup styling */
+.leaflet-popup-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.leaflet-popup-content b {
+  color: #25a4cb;
+}
+
+/* =========================================================
+   FLOATING "GET DIRECTIONS" BUTTON
+   ========================================================= */
+
+#directionsBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #25a4cb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+#directionsBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Visible state */
+#directionsBtn.show {
+  display: block;
+  animation: fadeUp 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #efeff2;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* Ripple effect */
+  .social-icon::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    animation: ripple 2s infinite;
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  .facebook { background: #1877f2; }
+   /* Link hover */
+  footer a {
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  footer a:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Pulse animation 
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(44,185,176,0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(44,185,176,0); }
+    100% { box-shadow: 0 0 0 0 rgba(44,185,176,0); }
+  }
+*/
+
