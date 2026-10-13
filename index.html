@@ -3,56 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sireenity | Let's create your dream smile together!</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/logo.jpg" />
+    <title>Sireenity Dental Clinic &amp; Skinsense Aesthetic Center | Jordan, Guimaras</title>
+    <meta
+      name="description"
+      content="Sireenity Dental Clinic and Skinsense Aesthetic Center in Jordan, Guimaras. Orthodontics, dental cleaning, implants, facial care, laser hair removal and more. Book an appointment today."
+    />
+    <meta name="theme-color" content="#0c7c82" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sireenity Dental Clinic &amp; Skinsense Aesthetic Center" />
+    <meta property="og:description" content="Let's create your dream smile together!" />
+    <meta property="og:image" content="assets/img/sireenity-logo.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Sireenity Dental Clinic",
+        "image": "assets/img/sireenity-logo.png",
+        "telephone": "+639471591378",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "MAVIKKS Bldg., Upper Watson, 2nd Floor, San Miguel",
+          "addressLocality": "Jordan",
+          "addressRegion": "Guimaras",
+          "addressCountry": "PH"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.60334135741877,
+          "longitude": 122.58800680113455
+        },
+        "sameAs": ["https://www.facebook.com/sireenity.dental"]
+      }
+    </script>
   </head>
-  <body>
-    <!-- Nav Section-->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light Section sticky-top"
-    >
-      <div class="container position-relative">
-        <!--LOGO-->
-        <a class="navbar-brand col-6 fw-medium" href="# ">
-          <img src="assets/img/logo.jpg" width="50" alt="" /> Sireenity
+  <body id="top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="0px 0px -55%">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav id="mainNav" class="navbar navbar-expand-lg sticky-top site-nav" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#top">
+          <img src="assets/img/favicon.png" width="48" height="48" alt="" />
+          Sireenity
         </a>
 
-         <!-- Hamburger (mobile, top-right, above search) -->
-        <button class="navbar-toggler hamburger-btn d-lg-none" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation" >
-           <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-          
-        <!-- Search bar -->
-         <form class="d-flex search-bar ms-auto mt-3 mt-lg-0" action="#" method="get">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-               Search
-            </button>
-         </form>
 
-         <!-- Collapsible Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav ms-auto  text-center text-lg-start ">
+          <ul class="navbar-nav ms-auto me-lg-3 text-center text-lg-start">
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
@@ -62,1572 +90,1274 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact Us</a>
             </li>
-            <li class="nav-item mt-2 mt-lg-0">
-              <a class="btn btn-outline-primary" href="#login">Login</a>
-            </li>
-            <!--
-            <li class="nav-item theme-toggle">
-              <label class="switch">
-                <input type="checkbox" id="themeToggle" />
-                <span class="slider"></span>
-              </label>
-            </li>
-            -->
           </ul>
+
+          <div class="search-wrap me-lg-3 mb-3 mb-lg-0">
+            <form id="siteSearchForm" class="input-group search-bar" role="search" novalidate>
+              <input
+                id="siteSearchInput"
+                class="form-control"
+                type="search"
+                list="serviceSuggestions"
+                placeholder="Search treatments"
+                aria-label="Search treatments"
+                autocomplete="off"
+              />
+              <button class="btn btn-outline-primary" type="submit" aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+            <datalist id="serviceSuggestions"></datalist>
+            <div id="searchStatus" class="search-status" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="text-center">
+            <a class="btn btn-primary px-4 nav-cta" href="#booking">Book Now</a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <section class="home-banner">
-      <div
-        id="homeCarousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-        data-bs-interval="4000"
-      >
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#homeCarousel"
-            data-bs-slide-to="0"
-            class="active"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#homeCarousel"
-            data-bs-slide-to="1"
-          ></button>
-        </div>
-
-        <div class="carousel-inner">
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="banner-slide">
-              <div class="banner-text">
-                Welcome to
-                <strong class="fst-italic" style="color: rgb(37, 164, 203)"
-                  >Sireenity Dental Clinic</strong
-                ><br />
-                and
-                <strong class="fst-italic text-warning"
-                  >Skinsense Aesthetic Center</strong
-                >
-              </div>
-              <img
-                src="assets/img/sireenity-logo.png"
-                alt="Sireenity Dental Clinic"
-                class="banner-logo"
-              />
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="banner-slide">
-              <div class="banner-text">
-                Welcome to
-                <strong class="fst-italic" style="color: #21bdcb"
-                  >Sireenity Dental Clinic</strong
-                ><br />
-                and
-                <strong class="fst-italic text-warning"
-                  >Skinsense Aesthetic Center</strong
-                >
-              </div>
-              <img
-                src="assets/img/skinsense-logo.png"
-                alt="Skinsense Aesthetic Center"
-                class="banner-logo"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Previous Button -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-
-        <!-- Next Button -->
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-
-    <!-- ================= SERVICES SECTION ================= -->
-    <div class="container py-5" id="services">
-      <h2 class="text-center mb-4">Our Services</h2>
-
-      <!-- MAIN PILLS -->
-      <ul
-        class="nav nav-pills justify-content-center mb-4"
-        id="mainTab"
-        role="tablist"
-      >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="dental-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#dental"
-            type="button"
-            role="tab"
-          >
-            Dental
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="skinsense-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#skinsense"
-            type="button"
-            role="tab"
-          >
-            Skinsense
-          </button>
-        </li>
-      </ul>
-
-      <div class="tab-content">
-        <!-- ================= DENTAL ================= -->
+    <main id="main">
+      <!-- ================= HERO ================= -->
+      <section class="home-banner" aria-label="Welcome">
         <div
-          class="tab-pane fade show active"
-          id="dental"
-          role="tabpanel"
-          aria-labelledby="dental-tab"
+          id="homeCarousel"
+          class="carousel carousel-dark slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-interval="6000"
         >
-         <!-- INNER TABS -->
-          <ul class="nav nav-tabs mb-4 dental-services-grid" id="dentalInnerTab" role="tablist">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#homeCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Sireenity Dental Clinic"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#homeCarousel"
+              data-bs-slide-to="1"
+              aria-label="Skinsense Aesthetic Center"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="banner-slide">
+                <img
+                  src="assets/img/sireenity-logo.png"
+                  width="800"
+                  height="533"
+                  alt="Sireenity Dental Clinic"
+                  class="banner-logo"
+                />
+                <h1 class="banner-title">
+                  Welcome to <span class="brand-dental">Sireenity Dental Clinic</span>
+                </h1>
+                <p class="banner-tagline">
+                  Let's create your dream smile together. Experience the gentle difference.
+                </p>
+                <div class="banner-actions">
+                  <a class="btn btn-primary btn-lg px-4" href="#booking">Book an Appointment</a>
+                  <a class="btn btn-outline-primary btn-lg px-4" href="#services">View Services</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="banner-slide">
+                <img
+                  src="assets/img/skinsense-logo.png"
+                  width="800"
+                  height="800"
+                  alt="Skinsense Aesthetic Center"
+                  class="banner-logo"
+                />
+                <p class="banner-title">
+                  and <span class="brand-skin">Skinsense Aesthetic Center</span>
+                </p>
+                <p class="banner-tagline">
+                  Facial care, laser treatments, and skin rejuvenation tailored to your skin.
+                </p>
+                <div class="banner-actions">
+                  <a class="btn btn-primary btn-lg px-4" href="#booking">Book an Appointment</a>
+                  <a class="btn btn-outline-primary btn-lg px-4" href="#services">View Services</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous slide</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next slide</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">What we offer</span>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-lead">
+              Complete dental care and aesthetic treatments under one roof.
+            </p>
+          </div>
+
+          <!-- CATEGORY PILLS -->
+          <ul class="nav category-nav" id="mainTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Orthodontics"
+                id="dental-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#dental"
                 type="button"
                 role="tab"
+                aria-controls="dental"
+                aria-selected="true"
               >
-                Orthodontics
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Fulloral"
-                type="button"
-                role="tab"
-              >
-                Full Oral Exam and X-ray
+                Dental
               </button>
             </li>
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-cleaning"
+                id="skinsense-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#skinsense"
                 type="button"
                 role="tab"
+                aria-controls="skinsense"
+                aria-selected="false"
               >
-                Dental Cleaning
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Fillings-rootcanal"
-                type="button"
-                role="tab"
-              >
-                Fillings, Root Canal
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Extractions"
-                type="button"
-                role="tab"
-              >
-                Extractions
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Full-Partial"
-                type="button"
-                role="tab"
-              >
-                Full Partial Dentures
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-CrownsBridges"
-                type="button"
-                role="tab"
-              >
-                Crown and Bridges
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Veneer"
-                type="button"
-                role="tab"
-              >
-                Veneer and Bleaching
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Implants"
-                type="button"
-                role="tab"
-              >
-                Dental Implants
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#dental-Certificate"
-                type="button"
-                role="tab"
-              >
-                Dental Certificate
+                Skinsense
               </button>
             </li>
           </ul>
 
           <div class="tab-content">
-            <!-- ORTHODONTICS -->
-            <div class="tab-pane fade show active" id="dental-Orthodontics" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/orthodontics.png"
-                      class="img-fluid rounded-start"
-                      alt="Orthodontics"
-                    />
-                  </div>
-
-                  <div class="col-md-8 p-4">
-                    <h3>Orthodontics</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Orthodontics focuses on correcting misaligned teeth and
-                        bite issues using braces to improve
-                        oral health, function, and appearance.
-
-                        <h6 class="fw-bold mt-3">
-                          Types of Orthodontic Treatment
-                        </h6>
-                        <ul>
-                          <li>Metal Braces</li>
-                          <li>Ceramic Braces</li>
-                          <li>Retainers (Post-treatment)</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Straighter, more confident smile</li>
-                          <li>Improved bite and chewing function</li>
-                          <li>Easier oral hygiene</li>
-                          <li>Prevents future dental problems</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- FULL ORAL EXAM AND X-RAY -->
-            <div class="tab-pane fade" id="dental-Fulloral" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/oral exam and x-ray.png"
-                      class="img-fluid rounded-start"
-                      alt="Full Oral Exam and X-ray"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-
-                    <h3>Full Oral & X-ray</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        A comprehensive dental examination combined with digital X-rays to assess your overall oral health and detect problems early.
-                        <br>
-                        <ul>
-                          <li>Visual examination of teeth, gums, and bite</li>
-                          <li>Digital dental X-rays</li>
-                          <li>Gum health assessment</li>
-                          <li>Review of dental and medical history</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Detects cavities, infections, and bone loss early</li>
-                          <li>Helps prevent costly future treatments</li>
-                          <li>Ensures accurate diagnosis and treatment planning</li>
-                          <li>Supports long-term oral health</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- DENTAL CLEANING -->
-            <div class="tab-pane fade" id="dental-cleaning" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/dental clinic.png"
-                      class="img-fluid rounded-start"
-                      alt="Dental Cleaning"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                       <h3>Dental Cleaning</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Professional dental cleaning removes plaque, tartar, and stains to keep your teeth and gums healthy and your smile fresh.
-
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Removal of plaque and tartar</li>
-                          <li>Polishing to remove surface stains</li>
-                          <li>Gum health assessment</li>
-                          <li>Gentle flossing and rinsing</li>
-                          <li>Oral hygiene advice from the dentist</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Why Dental Cleaning Is Important
-                        </h6>
-                         <ul>
-                          <li>Helps prevent cavities and gum disease</li>
-                          <li>Reduces bad breath</li>
-                          <li>Helps prevent costly future treatments</li>
-                          <li>Keeps teeth bright and healthy</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- FILLINGS, ROOTCANAL -->
-            <div class="tab-pane fade" id="dental-Fillings-rootcanal" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/fillings,rootcanal.png"
-                      class="img-fluid rounded-start"
-                      alt="Fillings-rootcanal"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Fillings, Rootcanal</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Fillings and root canal treatment are restorative procedures used to repair damaged or infected teeth, relieve pain, and restore normal function.
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Thorough dental examination</li>
-                          <li>Local anesthesia for comfort</li>
-                          <li>Removal of decay or infection</li>
-                          <li>Tooth restoration (filling or crown recommendation)</li>
-                          <li>Post-treatment care instructions</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Relieves tooth pain and sensitivity</li>
-                          <li>Stops infection from spreading</li>
-                          <li>Saves the natural tooth</li>
-                          <li>Restores chewing and appearance</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- EXTRACTIONS -->
-            <div class="tab-pane fade" id="dental-Extractions" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/extractions.png"
-                      class="img-fluid rounded-start"
-                      alt="Extractions"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Extractions</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                       Tooth extraction is the safe removal of a damaged, decayed, or problematic tooth to relieve pain and protect surrounding teeth and gums.
-                        <h6 class="fw-bold mt-3">
-                          Types Of Extractions
-                        </h6>
-                        <ul>
-                          <li>Simple extraction</li>
-                          <li>Surgical extraction</li>
-                          <li>Wisdom tooth removal</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Included
-                        </h6>
-                         <ul>
-                          <li>Pre-extraction assessment and X-ray</li>
-                          <li>Local anesthesia for comfort</li>
-                          <li>Safe and gentle tooth removal</li>
-                          <li>Post-extraction care instructions</li>
-                          <li>Prescription (if needed)</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Recovery & Aftercare
-                        </h6>
-                         <ul>
-                          <li>Mild swelling or soreness is normal</li>
-                          <li>Avoid hard foods for 24–48 hours</li>
-                          <li>Follow aftercare instructions to prevent infection</li>
-                          <li>Healing typically takes 7–10 days</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Relieves pain and infection</li>
-                          <li>Prevents damage to nearby teeth</li>
-                          <li>Improves overall oral health</li>
-                          <li>repares mouth for further treatment if needed</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- FULL PARTIAL DENTURES -->
-            <div class="tab-pane fade" id="dental-Full-Partial" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/fullpartial.png"
-                      class="img-fluid rounded-start"
-                      alt="Full Partial Dentures"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Full Partial Dentures</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Full and partial dentures are custom-made removable appliances designed to replace missing teeth, restore function, and improve smile appearance.
-                        <h6 class="fw-bold mt-3">
-                          Types Of Dentures
-                        </h6>
-                        <ul>
-                          <li>Full Dentures – Replace all missing teeth in the upper or lower jaw</li>
-                          <li>Partial Dentures – Replace one or more missing teeth while preserving remaining natural teeth</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Oral examination and impressions</li>
-                          <li>Custom denture design and fitting</li>
-                          <li>Bite and comfort adjustments</li>
-                          <li>Instructions on care and maintenance</li>
-                          <li>Follow-up adjustments if needed</li>
-                        </ul>
-
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Restores chewing and speech</li>
-                          <li>Improves facial structure and confidence</li>
-                          <li>Comfortable, natural-looking smile</li>
-                          <li>Affordable tooth replacement option</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CROWN AND BRIDGES -->
-            <div class="tab-pane fade" id="dental-CrownsBridges" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/crowns and bridges.png"
-                      class="img-fluid rounded-start"
-                      alt="Crown and Bridges"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Dental Cleaning</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Crowns and bridges are fixed dental restorations used to repair damaged teeth or replace missing teeth, restoring strength, function, and appearance.
-                        <h6 class="fw-bold mt-3">
-                          Difference Between Crowns & Bridges
-                        </h6>
-                        <ul>
-                          <li>Dental Crowns – Cover and protect a weakened or damaged tooth</li>
-                          <li>Dental Bridges – Replace one or more missing teeth by anchoring to nearby teeth</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Oral examination and treatment planning</li>
-                          <li>Tooth preparation and impressions</li>
-                          <li>Temporary crown or bridge (if needed)</li>
-                          <li>Custom-made permanent restoration</li>
-                          <li>Final fitting and bite adjustment</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Restores chewing strength</li>
-                          <li>Protects weakened teeth</li>
-                          <li>Improves smile appearance</li>
-                          <li>Prevents shifting of nearby teeth</li>
-                          <li>Long-lasting and natural-looking</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- VENEER AND BLEACHING -->
-            <div class="tab-pane fade" id="dental-Veneer" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/veneer&bleaching.png"
-                      class="img-fluid rounded-start"
-                      alt="Veneer and Bleachinng"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Veneer and Bleaching</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Veneers and teeth bleaching are cosmetic dental treatments designed to enhance the color, shape, and overall appearance of your smile.
-                        <h6 class="fw-bold mt-3">
-                          Difference Between Veneers & Bleaching
-                        </h6>
-                        <ul>
-                          <li>Veneers – Thin, custom-made shells that cover the front surface of teeth to improve shape, color, and alignment</li>
-                          <li>Teeth Bleaching – Professional whitening treatment to remove stains and brighten natural teeth</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Smile assessment and consultation</li>
-                          <li>Shade analysis and treatment planning</li>
-                          <li>Safe, professional bleaching or veneer preparation</li>
-                          <li>Custom veneer fabrication (for veneers)</li>
-                          <li>Post-treatment care instructions</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Whiter, brighter smile</li>
-                          <li>Improved tooth shape and symmetry</li>
-                          <li>Natural-looking, long-lasting results</li>
-                          <li>Boosts confidence and self-esteem</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- DENTAL IMPLANTS -->
-            <div class="tab-pane fade" id="dental-Implants" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/Implants.png"
-                      class="img-fluid rounded-start"
-                      alt="Dental Implants"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Dental Implants</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        Dental implants are permanent tooth replacements that look, feel, and function like natural teeth by anchoring securely into the jawbone.
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                        <ul>
-                          <li>Comprehensive oral examination and X-ray</li>
-                          <li>Implant treatment planning</li>
-                          <li>Surgical placement of implant</li>
-                          <li>Healing and integration period</li>
-                          <li>Final crown or prosthetic placement</li>
-                        </ul>
-
-                        <h6 class="fw-bold mt-3">
-                          Benifits
-                        </h6>
-                         <ul>
-                          <li>Looks and feels like a natural tooth</li>
-                          <li>Prevents bone loss in the jaw</li>
-                          <li>Long-lasting and durable</li>
-                          <li>Improves chewing, speech, and confidence</li>
-                          <li>No damage to nearby teeth</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- DENTAL CERTIFICATE -->
-            <div class="tab-pane fade" id="dental-Certificate" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/certificate.png"
-                      class="img-fluid rounded-start"
-                      alt="Dental Certificate"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h3>Dental Certificate</h3>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        A dental certificate is an official document issued by a licensed dentist confirming a patient’s oral health status for school, employment, travel, or medical requirements.
-                        <h6 class="fw-bold mt-3">
-                          Purpose of a Dental Certificate
-                        </h6>
-                        <ul>
-                          <li>School or university requirements</li>
-                          <li>Employment or pre-employment clearance</li>
-                          <li>Travel or visa applications</li>
-                          <li>Medical or surgical clearance</li>
-                          <li>Insurance or legal documentation</li>
-                        </ul>
-                        <br>
-                        <h6 class="fw-bold mt-3">
-                          Includes
-                        </h6>
-                         <ul>
-                          <li>Oral examination by a licensed dentist</li>
-                          <li>Assessment of teeth and gum condition</li>
-                          <li>Necessary dental X-rays (if required)</li>
-                          <li>Official signed and stamped certificate</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ================= SKINSENSE ================= -->
-        <div
-          class="tab-pane fade"
-          id="skinsense"
-          role="tabpanel"
-          aria-labelledby="skinsense-tab"
-        >
-          <!-- INNER TABS -->
-          <ul class="nav nav-tabs mb-3" id="skinsenseInnerTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#skinsense-laser"
-                type="button"
-                role="tab"
-              >
-                Laser & Hair Removal
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#skinsense-warts"
-                type="button"
-                role="tab"
-              >
-                Warts Removal
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#skinsense-facial"
-                type="button"
-                role="tab"
-              >
-                Facial Care
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#skinsense-acne"
-                type="button"
-                role="tab"
-              >
-                Acne Scar & Melasma Resurfacing
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content">
-            <!-- LASER -->
+            <!-- ================= DENTAL ================= -->
             <div
               class="tab-pane fade show active"
-              id="skinsense-laser"
+              id="dental"
               role="tabpanel"
+              aria-labelledby="dental-tab"
             >
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/candela.jpg"
-                      class="img-fluid rounded-start"
-                      alt="Laser Service"
-                    />
+              <ul class="nav service-nav" id="dentalInnerTab" role="tablist">
+                <li role="presentation">
+                  <button class="nav-link service-link active" id="dental-Orthodontics-tab" data-bs-toggle="pill" data-bs-target="#dental-Orthodontics" type="button" role="tab" aria-controls="dental-Orthodontics" aria-selected="true">
+                    Orthodontics
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Fulloral-tab" data-bs-toggle="pill" data-bs-target="#dental-Fulloral" type="button" role="tab" aria-controls="dental-Fulloral" aria-selected="false">
+                    Full Oral Exam &amp; X-ray
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-cleaning-tab" data-bs-toggle="pill" data-bs-target="#dental-cleaning" type="button" role="tab" aria-controls="dental-cleaning" aria-selected="false">
+                    Dental Cleaning
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Fillings-rootcanal-tab" data-bs-toggle="pill" data-bs-target="#dental-Fillings-rootcanal" type="button" role="tab" aria-controls="dental-Fillings-rootcanal" aria-selected="false">
+                    Fillings &amp; Root Canal
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Extractions-tab" data-bs-toggle="pill" data-bs-target="#dental-Extractions" type="button" role="tab" aria-controls="dental-Extractions" aria-selected="false">
+                    Extractions
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Full-Partial-tab" data-bs-toggle="pill" data-bs-target="#dental-Full-Partial" type="button" role="tab" aria-controls="dental-Full-Partial" aria-selected="false">
+                    Full &amp; Partial Dentures
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-CrownsBridges-tab" data-bs-toggle="pill" data-bs-target="#dental-CrownsBridges" type="button" role="tab" aria-controls="dental-CrownsBridges" aria-selected="false">
+                    Crowns &amp; Bridges
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Veneer-tab" data-bs-toggle="pill" data-bs-target="#dental-Veneer" type="button" role="tab" aria-controls="dental-Veneer" aria-selected="false">
+                    Veneers &amp; Bleaching
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Implants-tab" data-bs-toggle="pill" data-bs-target="#dental-Implants" type="button" role="tab" aria-controls="dental-Implants" aria-selected="false">
+                    Dental Implants
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="dental-Certificate-tab" data-bs-toggle="pill" data-bs-target="#dental-Certificate" type="button" role="tab" aria-controls="dental-Certificate" aria-selected="false">
+                    Dental Certificate
+                  </button>
+                </li>
+              </ul>
 
-                    <br />
-                    <img
-                      src="assets/img/soprano.jpg"
-                      class="img-fluid rounded-start"
-                      alt="Laser Service"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h5 class="mb-1">Laser Whitening & Hair Removal</h5>
-                    <h6 class="text-muted mb-4">Candela Picoway Laser</h6>
-                    
-                    <!--UNDERARM-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium text-center">Underarm</h6>  
-                    </div>
-
-                    <!-- BIKINI -->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium text-center">Bikini</div>
-                    </div>
-
-                    <!-- BUTT -->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium text-center">Butt</div>
-                    </div>
-
-                    <!-- LEGS -->
-                    <div class="row align-items-center py-2">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Legs <br> <span class="text-muted small"
-                          >(By assessment)</span></h6>
-                    </div>
-                    <br>
-
-                    <br>
-                    <h6 class="text-muted mb-4">
-                      Soprano Diode <i>(Hair Laser Removal)</i>
-                    </h6>
-
-                    <!--FACE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium text-center">Face</div>
-                    </div>
-
-                    <!-- UNDERARM -->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium text-center">Underarm</h6>
-                    </div>
-
-                    <!-- BRAZILIAN -->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium text-center">Brazilian</div>
-                    </div>
-
-                    <!-- HALF LEGS -->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium text-center">Half Legs</div>
-                    </div>
-
-                    <br />
-                    <h5 class="text-muted mb-4">UNLIMITED</h5>
-
-                    <!--HEADER ROW-->
-                    <div class="row fw-semibold text-uppercase small">
-                      <div class="col-4"></div>
-                      <div class="col-4 text-center border-bottom pb-2 mb-2">
-                        FOR 6 MONTHS
+              <div class="tab-content">
+                <!-- ORTHODONTICS -->
+                <div class="tab-pane fade show active" id="dental-Orthodontics" role="tabpanel" aria-labelledby="dental-Orthodontics-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/orthodontics.webp" width="1024" height="1024" alt="Orthodontics at Sireenity Dental Clinic" />
+                        </div>
                       </div>
-                      <div class="col-4 text-center border-bottom pb-2 mb-2">
-                        FOR 1 YEAR
+                      <div class="col-lg-7 service-body">
+                        <h3>Orthodontics</h3>
+                        <p class="service-intro">
+                          Orthodontics focuses on correcting misaligned teeth and bite issues
+                          using braces to improve oral health, function, and appearance.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Types of Orthodontic Treatment</h4>
+                            <ul>
+                              <li>Metal braces</li>
+                              <li>Ceramic braces</li>
+                              <li>Retainers (post-treatment)</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Straighter, more confident smile</li>
+                              <li>Improved bite and chewing function</li>
+                              <li>Easier oral hygiene</li>
+                              <li>Prevents future dental problems</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Orthodontics">Book this service</a>
                       </div>
-
-                      <div class="col-4"></div>
-                      <div class="col-4 text-center border-bottom pb-2 mb-2">
-                        1 BODY PART
-                      </div>
-                      <div class="col-4 text-center border-bottom pb-2 mb-2">
-                        2 BODY PARTS
-                      </div>
-
                     </div>
-                  </div>
+                  </article>
+                </div>
+
+                <!-- FULL ORAL EXAM AND X-RAY -->
+                <div class="tab-pane fade" id="dental-Fulloral" role="tabpanel" aria-labelledby="dental-Fulloral-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/oral-exam-xray.webp" width="1024" height="1024" loading="lazy" alt="Full oral exam and X-ray" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Full Oral Exam &amp; X-ray</h3>
+                        <p class="service-intro">
+                          A comprehensive dental examination combined with digital X-rays to
+                          assess your overall oral health and detect problems early.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Visual examination of teeth, gums, and bite</li>
+                              <li>Digital dental X-rays</li>
+                              <li>Gum health assessment</li>
+                              <li>Review of dental and medical history</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Detects cavities, infections, and bone loss early</li>
+                              <li>Helps prevent costly future treatments</li>
+                              <li>Ensures accurate diagnosis and treatment planning</li>
+                              <li>Supports long-term oral health</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Full Oral Exam &amp; X-ray">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- DENTAL CLEANING -->
+                <div class="tab-pane fade" id="dental-cleaning" role="tabpanel" aria-labelledby="dental-cleaning-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/dental-cleaning.webp" width="1024" height="1024" loading="lazy" alt="Dental cleaning" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Dental Cleaning</h3>
+                        <p class="service-intro">
+                          Professional dental cleaning removes plaque, tartar, and stains to
+                          keep your teeth and gums healthy and your smile fresh.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Removal of plaque and tartar</li>
+                              <li>Polishing to remove surface stains</li>
+                              <li>Gum health assessment</li>
+                              <li>Gentle flossing and rinsing</li>
+                              <li>Oral hygiene advice from the dentist</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Why Dental Cleaning Is Important</h4>
+                            <ul>
+                              <li>Helps prevent cavities and gum disease</li>
+                              <li>Reduces bad breath</li>
+                              <li>Helps prevent costly future treatments</li>
+                              <li>Keeps teeth bright and healthy</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Dental Cleaning">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- FILLINGS, ROOT CANAL -->
+                <div class="tab-pane fade" id="dental-Fillings-rootcanal" role="tabpanel" aria-labelledby="dental-Fillings-rootcanal-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/fillings-root-canal.webp" width="1024" height="1024" loading="lazy" alt="Fillings and root canal treatment" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Fillings &amp; Root Canal</h3>
+                        <p class="service-intro">
+                          Fillings and root canal treatment are restorative procedures used to
+                          repair damaged or infected teeth, relieve pain, and restore normal
+                          function.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Thorough dental examination</li>
+                              <li>Local anesthesia for comfort</li>
+                              <li>Removal of decay or infection</li>
+                              <li>Tooth restoration (filling or crown recommendation)</li>
+                              <li>Post-treatment care instructions</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Relieves tooth pain and sensitivity</li>
+                              <li>Stops infection from spreading</li>
+                              <li>Saves the natural tooth</li>
+                              <li>Restores chewing and appearance</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Fillings &amp; Root Canal">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- EXTRACTIONS -->
+                <div class="tab-pane fade" id="dental-Extractions" role="tabpanel" aria-labelledby="dental-Extractions-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/extractions.webp" width="1024" height="1024" loading="lazy" alt="Tooth extractions" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Extractions</h3>
+                        <p class="service-intro">
+                          Tooth extraction is the safe removal of a damaged, decayed, or
+                          problematic tooth to relieve pain and protect surrounding teeth and
+                          gums.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Types of Extractions</h4>
+                            <ul>
+                              <li>Simple extraction</li>
+                              <li>Surgical extraction</li>
+                              <li>Wisdom tooth removal</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Pre-extraction assessment and X-ray</li>
+                              <li>Local anesthesia for comfort</li>
+                              <li>Safe and gentle tooth removal</li>
+                              <li>Post-extraction care instructions</li>
+                              <li>Prescription (if needed)</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Recovery &amp; Aftercare</h4>
+                            <ul>
+                              <li>Mild swelling or soreness is normal</li>
+                              <li>Avoid hard foods for 24–48 hours</li>
+                              <li>Follow aftercare instructions to prevent infection</li>
+                              <li>Healing typically takes 7–10 days</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Relieves pain and infection</li>
+                              <li>Prevents damage to nearby teeth</li>
+                              <li>Improves overall oral health</li>
+                              <li>Prepares the mouth for further treatment if needed</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Extractions">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- FULL & PARTIAL DENTURES -->
+                <div class="tab-pane fade" id="dental-Full-Partial" role="tabpanel" aria-labelledby="dental-Full-Partial-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/dentures.webp" width="1024" height="1024" loading="lazy" alt="Full and partial dentures" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Full &amp; Partial Dentures</h3>
+                        <p class="service-intro">
+                          Full and partial dentures are custom-made removable appliances
+                          designed to replace missing teeth, restore function, and improve
+                          smile appearance.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Types of Dentures</h4>
+                            <ul>
+                              <li>
+                                Full dentures
+                                <small>Replace all missing teeth in the upper or lower jaw</small>
+                              </li>
+                              <li>
+                                Partial dentures
+                                <small>Replace one or more missing teeth while preserving remaining natural teeth</small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Oral examination and impressions</li>
+                              <li>Custom denture design and fitting</li>
+                              <li>Bite and comfort adjustments</li>
+                              <li>Instructions on care and maintenance</li>
+                              <li>Follow-up adjustments if needed</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Restores chewing and speech</li>
+                              <li>Improves facial structure and confidence</li>
+                              <li>Comfortable, natural-looking smile</li>
+                              <li>Affordable tooth replacement option</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Full &amp; Partial Dentures">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- CROWNS AND BRIDGES -->
+                <div class="tab-pane fade" id="dental-CrownsBridges" role="tabpanel" aria-labelledby="dental-CrownsBridges-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/crowns-bridges.webp" width="1024" height="1024" loading="lazy" alt="Dental crowns and bridges" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Crowns &amp; Bridges</h3>
+                        <p class="service-intro">
+                          Crowns and bridges are fixed dental restorations used to repair
+                          damaged teeth or replace missing teeth, restoring strength,
+                          function, and appearance.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Crowns vs. Bridges</h4>
+                            <ul>
+                              <li>
+                                Dental crowns
+                                <small>Cover and protect a weakened or damaged tooth</small>
+                              </li>
+                              <li>
+                                Dental bridges
+                                <small>Replace one or more missing teeth by anchoring to nearby teeth</small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Oral examination and treatment planning</li>
+                              <li>Tooth preparation and impressions</li>
+                              <li>Temporary crown or bridge (if needed)</li>
+                              <li>Custom-made permanent restoration</li>
+                              <li>Final fitting and bite adjustment</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Restores chewing strength</li>
+                              <li>Protects weakened teeth</li>
+                              <li>Improves smile appearance</li>
+                              <li>Prevents shifting of nearby teeth</li>
+                              <li>Long-lasting and natural-looking</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Crowns &amp; Bridges">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- VENEERS AND BLEACHING -->
+                <div class="tab-pane fade" id="dental-Veneer" role="tabpanel" aria-labelledby="dental-Veneer-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/veneers-bleaching.webp" width="1024" height="1024" loading="lazy" alt="Veneers and teeth bleaching" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Veneers &amp; Bleaching</h3>
+                        <p class="service-intro">
+                          Veneers and teeth bleaching are cosmetic dental treatments designed
+                          to enhance the color, shape, and overall appearance of your smile.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Veneers vs. Bleaching</h4>
+                            <ul>
+                              <li>
+                                Veneers
+                                <small>Thin, custom-made shells that cover the front surface of teeth to improve shape, color, and alignment</small>
+                              </li>
+                              <li>
+                                Teeth bleaching
+                                <small>Professional whitening treatment to remove stains and brighten natural teeth</small>
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Smile assessment and consultation</li>
+                              <li>Shade analysis and treatment planning</li>
+                              <li>Safe, professional bleaching or veneer preparation</li>
+                              <li>Custom veneer fabrication (for veneers)</li>
+                              <li>Post-treatment care instructions</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Whiter, brighter smile</li>
+                              <li>Improved tooth shape and symmetry</li>
+                              <li>Natural-looking, long-lasting results</li>
+                              <li>Boosts confidence and self-esteem</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Veneers &amp; Bleaching">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- DENTAL IMPLANTS -->
+                <div class="tab-pane fade" id="dental-Implants" role="tabpanel" aria-labelledby="dental-Implants-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/implants.webp" width="1024" height="1024" loading="lazy" alt="Dental implants" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Dental Implants</h3>
+                        <p class="service-intro">
+                          Dental implants are permanent tooth replacements that look, feel,
+                          and function like natural teeth by anchoring securely into the
+                          jawbone.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Comprehensive oral examination and X-ray</li>
+                              <li>Implant treatment planning</li>
+                              <li>Surgical placement of implant</li>
+                              <li>Healing and integration period</li>
+                              <li>Final crown or prosthetic placement</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Benefits</h4>
+                            <ul>
+                              <li>Looks and feels like a natural tooth</li>
+                              <li>Prevents bone loss in the jaw</li>
+                              <li>Long-lasting and durable</li>
+                              <li>Improves chewing, speech, and confidence</li>
+                              <li>No damage to nearby teeth</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Dental Implants">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- DENTAL CERTIFICATE -->
+                <div class="tab-pane fade" id="dental-Certificate" role="tabpanel" aria-labelledby="dental-Certificate-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/certificate.webp" width="1024" height="1024" loading="lazy" alt="Dental certificate" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Dental Certificate</h3>
+                        <p class="service-intro">
+                          A dental certificate is an official document issued by a licensed
+                          dentist confirming a patient's oral health status for school,
+                          employment, travel, or medical requirements.
+                        </p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Purpose of a Dental Certificate</h4>
+                            <ul>
+                              <li>School or university requirements</li>
+                              <li>Employment or pre-employment clearance</li>
+                              <li>Travel or visa applications</li>
+                              <li>Medical or surgical clearance</li>
+                              <li>Insurance or legal documentation</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Includes</h4>
+                            <ul>
+                              <li>Oral examination by a licensed dentist</li>
+                              <li>Assessment of teeth and gum condition</li>
+                              <li>Necessary dental X-rays (if required)</li>
+                              <li>Official signed and stamped certificate</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Dental Certificate">Book this service</a>
+                      </div>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
 
-            <!-- WARTS -->
-            <div class="tab-pane fade" id="skinsense-warts" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <br />
-                    <img
-                      src="assets/img/warts removal.jpg"
-                      class="img-fluid rounded-start"
-                      alt="Warts Removal"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h5>Warts Removal</h5>
+            <!-- ================= SKINSENSE ================= -->
+            <div
+              class="tab-pane fade"
+              id="skinsense"
+              role="tabpanel"
+              aria-labelledby="skinsense-tab"
+            >
+              <ul class="nav service-nav service-nav-4" id="skinsenseInnerTab" role="tablist">
+                <li role="presentation">
+                  <button class="nav-link service-link active" id="skinsense-laser-tab" data-bs-toggle="pill" data-bs-target="#skinsense-laser" type="button" role="tab" aria-controls="skinsense-laser" aria-selected="true">
+                    Laser &amp; Hair Removal
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="skinsense-warts-tab" data-bs-toggle="pill" data-bs-target="#skinsense-warts" type="button" role="tab" aria-controls="skinsense-warts" aria-selected="false">
+                    Warts Removal
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="skinsense-facial-tab" data-bs-toggle="pill" data-bs-target="#skinsense-facial" type="button" role="tab" aria-controls="skinsense-facial" aria-selected="false">
+                    Facial Care
+                  </button>
+                </li>
+                <li role="presentation">
+                  <button class="nav-link service-link" id="skinsense-acne-tab" data-bs-toggle="pill" data-bs-target="#skinsense-acne" type="button" role="tab" aria-controls="skinsense-acne" aria-selected="false">
+                    Acne Scar &amp; Melasma Resurfacing
+                  </button>
+                </li>
+              </ul>
 
-                    <!--FACE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium">Face</div>
+              <div class="tab-content">
+                <!-- LASER -->
+                <div class="tab-pane fade show active" id="skinsense-laser" role="tabpanel" aria-labelledby="skinsense-laser-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/candela.webp" width="715" height="709" loading="lazy" alt="Candela Picoway Laser" />
+                          <img src="assets/img/soprano.webp" width="715" height="374" loading="lazy" alt="Soprano Diode laser hair removal" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Laser Whitening &amp; Hair Removal</h3>
+                        <p class="service-subtitle">Candela Picoway Laser and Soprano Diode</p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Candela Picoway Laser</h4>
+                            <ul>
+                              <li>Underarm</li>
+                              <li>Bikini</li>
+                              <li>Butt</li>
+                              <li>Legs <small>By assessment</small></li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Soprano Diode (Laser Hair Removal)</h4>
+                            <ul>
+                              <li>Face</li>
+                              <li>Underarm</li>
+                              <li>Brazilian</li>
+                              <li>Half legs</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Unlimited Packages</h4>
+                            <ul>
+                              <li>Unlimited sessions for 6 months</li>
+                              <li>Unlimited sessions for 1 year</li>
+                              <li>Available for 1 or 2 body parts</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <p class="service-note">
+                          For current rates and package details, please call or message the clinic.
+                        </p>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Laser Whitening &amp; Hair Removal">Book this service</a>
+                      </div>
                     </div>
-
-                    <!--NECK-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium">Neck</div>
-                    </div>
-
-                    <!--BODY AREA-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Body Area <br> <span class="text-muted small"
-                          >(Depends on the sensitivity of the area)</span>
-                      </h6>
-                    </div>
-
-                    <!--MOLE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium">Mole</div>
-                    </div>
-
-                    <br />
-                    <h5 class="mb-1">Through Co2 Laser</h5>
-
-                    <!-- FACE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium">Face</div>
-                    </div>
-
-                    <!--NECK-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <div class="col-4 fw-medium">Neck</div>
-                    </div>
-
-                    <!--BODY-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center"> Body Area <br> <span class="text-muted small"
-                          >(Depends on the sensitivity of the area)</span>
-                      </h6>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-              </div>
-            </div>
 
-            <!-- FACIAL CARE -->
-            <div class="tab-pane fade" id="skinsense-facial" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/facial care.jpg"
-                      class="img-fluid rounded-start"
-                      alt="Facial Care"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h5 class="mb-1">Facial Care</h5>
-
-                    <!--DIAMOND-->
-                    <div class="row align-items-center border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center"> Diamond Peel</h6>
+                <!-- WARTS -->
+                <div class="tab-pane fade" id="skinsense-warts" role="tabpanel" aria-labelledby="skinsense-warts-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/warts-removal.webp" width="634" height="749" loading="lazy" alt="Warts removal" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Warts Removal</h3>
+                        <p class="service-subtitle">Standard removal or CO2 laser</p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Warts Removal</h4>
+                            <ul>
+                              <li>Face</li>
+                              <li>Neck</li>
+                              <li>Body area <small>Depends on the sensitivity of the area</small></li>
+                              <li>Mole</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4>Through CO2 Laser</h4>
+                            <ul>
+                              <li>Face</li>
+                              <li>Neck</li>
+                              <li>Body area <small>Depends on the sensitivity of the area</small></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Warts Removal">Book this service</a>
+                      </div>
                     </div>
-
-                    <!--COLLAGEN-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Collagen Facial</h6>
-                    </div>
-
-                    <!--ANTI-ACNE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Anti-Acne w/HF</h6>
-                    </div>
-
-                    <!--INTENSIVE DEEP-->
-                    <div class="row align-items-center border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Intensive Deep Cleansing</h6>
-                    </div>
-
-                    <!--SKINSENSE ICE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Skinsense Ice Rejuvenation</h6>
-                    </div>
-
-                    <!--SKINSENSE SIGNATURE-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Skinsense Signature Facial</h6>
-                    </div>
-                  </div>
+                  </article>
                 </div>
-              </div>
-            </div>
 
-            <!-- ACNE & MELASMA -->
-            <div class="tab-pane fade" id="skinsense-acne" role="tabpanel">
-              <div class="card mb-4 service-card">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img
-                      src="assets/img/acne scar.jpg"
-                      class="img-fluid rounded-start"
-                      alt="Acne Treatment"
-                    />
-                  </div>
-                  <div class="col-md-8 p-4">
-                    <h5>Acne Scar & Melasma Resurfacing</h5>
-
-                    <!--CLASSIC MICRONEEDLING-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Classic Microneedling</h6>
+                <!-- FACIAL CARE -->
+                <div class="tab-pane fade" id="skinsense-facial" role="tabpanel" aria-labelledby="skinsense-facial-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/facial-care.webp" width="715" height="715" loading="lazy" alt="Facial care" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Facial Care</h3>
+                        <p class="service-subtitle">Skinsense facial treatments</p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Treatments</h4>
+                            <ul>
+                              <li>Diamond Peel</li>
+                              <li>Collagen Facial</li>
+                              <li>Anti-Acne w/ HF</li>
+                              <li>Intensive Deep Cleansing</li>
+                              <li>Skinsense Ice Rejuvenation</li>
+                              <li>Skinsense Signature Facial</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Facial Care">Book this service</a>
+                      </div>
                     </div>
+                  </article>
+                </div>
 
-                    <!--PICOWAY CARBON LASER-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Picoway Carbon Laser</h6>
+                <!-- ACNE & MELASMA -->
+                <div class="tab-pane fade" id="skinsense-acne" role="tabpanel" aria-labelledby="skinsense-acne-tab" tabindex="0">
+                  <article class="service-card">
+                    <div class="row g-0">
+                      <div class="col-lg-5">
+                        <div class="service-media">
+                          <img src="assets/img/acne-scar.webp" width="715" height="866" loading="lazy" alt="Acne scar and melasma resurfacing" />
+                        </div>
+                      </div>
+                      <div class="col-lg-7 service-body">
+                        <h3>Acne Scar &amp; Melasma Resurfacing</h3>
+                        <p class="service-subtitle">Skin resurfacing treatments</p>
+                        <div class="service-details">
+                          <div>
+                            <h4>Treatments</h4>
+                            <ul>
+                              <li>Classic Microneedling</li>
+                              <li>Picoway Carbon Laser</li>
+                              <li>Picotoning</li>
+                              <li>Skinsense Fractional Laser</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <a class="btn btn-primary px-4" href="#booking" data-service="Acne Scar &amp; Melasma Resurfacing">Book this service</a>
+                      </div>
                     </div>
-
-                    <!--PICOTONING-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Picotoning</h6>
-                    </div>
-
-                    <!-- SKINSENSE FRACTIONAL-->
-                    <div class="row align-items-center py-2 border-bottom">
-                      <div class="col-4"></div>
-                      <h6 class="fw-medium mt-3 text-center">Skinsense Fractional Laser</h6>
-                    </div>
-                  </div>
+                  </article>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- ================= FAQ ================= -->
-
-    <div class="faq-section" id="faq">
-      <div class="container">
-        <h2 class="text-center">Frequently Asked Questions (FAQs)</h2>
-        <div class="accordion" id="faqAccordion">
-          <!-- One-->
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqOne">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Do you offer painless dental treatments?
-              </button>
-            </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqOne"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes. We use modern, advanced equipment and gentle anesthesia to
-                ensure treatments are as comfortable and pain-free as possible.
-              </div>
-            </div>
+      <!-- ================= FAQ ================= -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Good to know</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
           </div>
 
-          <!--Two-->
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                What dental services do you provide?
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqTwo"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                We offer general dentistry, cosmetic dentistry, teeth whitening,
-                dental implants, orthodontics (braces), root canal
-                treatments, and pediatric dental care.
+          <div class="accordion faq-list" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Do you offer painless dental treatments?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. We use modern, advanced equipment and gentle anesthesia to ensure
+                  treatments are as comfortable and pain-free as possible.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Three-->
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Are dental implants safe and long-lasting?
-              </button>
-            </h2>
-            <div
-              id="collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqThree"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes. Dental implants are safe and effective solution for
-                missing teeth when placed by experienced professionals and
-                properly maintained.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What dental services do you provide?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We offer general dentistry, cosmetic dentistry, teeth whitening, dental
+                  implants, orthodontics (braces), root canal treatments, and pediatric
+                  dental care.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Four-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Do you offer cosmetic dental treatments?
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqFour"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes. We provide teeth whitening, veneers, smile designing, and
-                aesthetic restorations to enhance your smile.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Are dental implants safe and long-lasting?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Dental implants are a safe and effective solution for missing teeth
+                  when placed by experienced professionals and properly maintained.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Five-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqFive">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                How can I book an appointment?
-              </button>
-            </h2>
-            <div
-              id="collapseFive"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqFive"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                You can book an appointment by calling our clinic or visiting us
-                in person.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Do you offer cosmetic dental treatments?
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. We provide teeth whitening, veneers, smile designing, and aesthetic
+                  restorations to enhance your smile.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Six-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqSix">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSix"
-                aria-expanded="false"
-                aria-controls="collapseSix"
-              >
-                Are aesthetic treatments safe?
-              </button>
-            </h2>
-            <div
-              id="collapseSix"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqSix"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes. All treatments are performed by trained professionals using
-                FDA-approved products and advanced technology.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  How can I book an appointment?
+                </button>
+              </h3>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can request an appointment using the
+                  <a href="#booking">booking form</a> on this page, by calling or texting
+                  <a href="tel:+639471591378">0947-159-1378</a>, or by visiting us in person.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Seven-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqSeven">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseSeven"
-                aria-expanded="false"
-                aria-controls="collapseSeven"
-              >
-                What skin and aesthetic services do you offer?
-              </button>
-            </h2>
-            <div
-              id="collapseSeven"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqSeven"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                We offer facials, laser hair reduction, acne and
-                pigmentation treatments, anti-aging procedures,
-                and skin rejuvenation therapies.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Are aesthetic treatments safe?
+                </button>
+              </h3>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="faqSix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. All treatments are performed by trained professionals using
+                  FDA-approved products and advanced technology.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Eight-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqEight">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseEight"
-                aria-expanded="false"
-                aria-controls="collapseEight"
-              >
-                Are the treatments painful?
-              </button>
-            </h2>
-            <div
-              id="collapseEight"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqEight"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Most treatments involve minimal discomfort. We use numbing
-                creams or advanced techniques to ensure patient comfort.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  What skin and aesthetic services do you offer?
+                </button>
+              </h3>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="faqSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We offer facials, laser hair reduction, acne and pigmentation treatments,
+                  anti-aging procedures, and skin rejuvenation therapies.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Nine-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqNine">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseNine"
-                aria-expanded="false"
-                aria-controls="collapseNine"
-              >
-                How many sessions will I need to see results?
-              </button>
-            </h2>
-            <div
-              id="collapseNine"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqNine"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                The number of sessions varies depending on the treatment and
-                individual skin concerns. Some treatments show immediate
-                results, while others require multiple sessions.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Are the treatments painful?
+                </button>
+              </h3>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="faqEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Most treatments involve minimal discomfort. We use numbing creams or
+                  advanced techniques to ensure patient comfort.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Ten-->
-
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqTen">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTen"
-                aria-expanded="false"
-                aria-controls="collapseTen"
-              >
-                Are the treatments suitable for all skin types?
-              </button>
-            </h2>
-            <div
-              id="collapseTen"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqTen"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Yes. Our treatments are customized to suit different skin types
-                and concerns after a detailed skin analysis.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  How many sessions will I need to see results?
+                </button>
+              </h3>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="faqNine" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  The number of sessions varies depending on the treatment and individual
+                  skin concerns. Some treatments show immediate results, while others
+                  require multiple sessions.
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--Eleven-->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Are the treatments suitable for all skin types?
+                </button>
+              </h3>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="faqTen" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Our treatments are customized to suit different skin types and
+                  concerns after a detailed skin analysis.
+                </div>
+              </div>
+            </div>
 
-          <div class="accordion-item faq-card">
-            <h2 class="accordion-header" id="faqEleven">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseEleven"
-                aria-expanded="false"
-                aria-controls="collapseEleven"
-              >
-                How do I know which treatment is right for me?
-              </button>
-            </h2>
-            <div
-              id="collapseEleven"
-              class="accordion-collapse collapse"
-              aria-labelledby="faqEleven"
-              data-bs-parent="#faqAccordion"
-            >
-              <div class="accordion-body">
-                Our experts provide personalized consultations to assess your
-                skin and recommend the most effective treatment plan.
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  How do I know which treatment is right for me?
+                </button>
+              </h3>
+              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="faqEleven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Our experts provide personalized consultations to assess your skin and
+                  recommend the most effective treatment plan.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- ================= MAP SECTION ================= -->
+      <!-- ================= BOOKING FORM ================= -->
+      <section id="booking" class="section booking-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="booking-card">
+                <div class="section-header mb-4">
+                  <span class="section-kicker">Easy booking</span>
+                  <h2 class="section-title">Book an Appointment</h2>
+                  <p class="section-lead">
+                    Tell us what you need and your preferred date. We'll contact you to
+                    confirm your schedule.
+                  </p>
+                </div>
 
-    <div class="container my-5" id="mapSection">
-      <h3 class="text-center mb-3">Where to Find Us</h3>
-      <div id="leafletMap"></div>
-    </div>
+                <form id="appointmentForm" class="row g-3" novalidate>
+                  <div class="col-md-6">
+                    <label for="patientName" class="form-label">
+                      Full name <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <input id="patientName" name="name" type="text" class="form-control" placeholder="Your name" autocomplete="name" minlength="2" maxlength="80" required />
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="patientPhone" class="form-label">
+                      Mobile number <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <input id="patientPhone" name="phone" type="tel" class="form-control" placeholder="09XX-XXX-XXXX" autocomplete="tel" inputmode="tel" maxlength="20" required />
+                    <div class="invalid-feedback">
+                      Please enter a valid mobile number, e.g. 0947-159-1378.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="serviceType" class="form-label">
+                      Service <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <select id="serviceType" name="service" class="form-select" required>
+                      <option value="">Select service</option>
+                      <optgroup label="Dental">
+                        <option>Dental Consultation</option>
+                        <option>Orthodontics</option>
+                        <option>Full Oral Exam &amp; X-ray</option>
+                        <option>Dental Cleaning</option>
+                        <option>Fillings &amp; Root Canal</option>
+                        <option>Extractions</option>
+                        <option>Full &amp; Partial Dentures</option>
+                        <option>Crowns &amp; Bridges</option>
+                        <option>Veneers &amp; Bleaching</option>
+                        <option>Dental Implants</option>
+                        <option>Dental Certificate</option>
+                      </optgroup>
+                      <optgroup label="Skinsense">
+                        <option>Laser Whitening &amp; Hair Removal</option>
+                        <option>Warts Removal</option>
+                        <option>Facial Care</option>
+                        <option>Acne Scar &amp; Melasma Resurfacing</option>
+                      </optgroup>
+                    </select>
+                    <div class="invalid-feedback">Please select a service.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="preferredDate" class="form-label">
+                      Preferred date <span class="required-mark" aria-hidden="true">*</span>
+                    </label>
+                    <input id="preferredDate" name="date" type="date" class="form-control" required />
+                    <div class="invalid-feedback">Please choose today or a future date.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="preferredTime" class="form-label">Preferred time</label>
+                    <select id="preferredTime" name="time" class="form-select">
+                      <option>Any time</option>
+                      <option>Morning</option>
+                      <option>Afternoon</option>
+                    </select>
+                  </div>
+                  <!-- Honeypot: hidden from people, filled in by spam bots -->
+                  <div class="visually-hidden" aria-hidden="true">
+                    <label for="bookingWebsite">Leave this field empty</label>
+                    <input id="bookingWebsite" name="hp_field" type="text" tabindex="-1" autocomplete="off" />
+                  </div>
+                  <div class="col-12">
+                    <label for="appointmentNotes" class="form-label">Message (optional)</label>
+                    <textarea id="appointmentNotes" name="message" class="form-control" rows="4" maxlength="500" placeholder="Tell us more about your concern..."></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Request Appointment</button>
+                    <p class="form-text mt-3 mb-0">
+                      This is a request, not a confirmed booking. Your schedule is final
+                      once the clinic contacts you. Your details are used only to arrange
+                      your appointment.
+                    </p>
+                  </div>
+                </form>
 
-    <!-- ================= FLOATING BUTTON ================= -->
-    <button id="floatingDirections" class="floating-directions">
-      📍 Get Directions
-    </button>
+                <!-- Shown after the form is completed -->
+                <div id="bookingResult" class="booking-result" hidden>
+                  <h3 tabindex="-1">Almost done — send your request to the clinic</h3>
+                  <p class="text-muted">
+                    Your details are ready. Send them to us by text so we can confirm your
+                    schedule, or call the clinic directly.
+                  </p>
+                  <label for="bookingSummary" class="visually-hidden">Your appointment request</label>
+                  <textarea id="bookingSummary" class="form-control booking-summary mb-3" rows="6" readonly></textarea>
+                  <div class="booking-actions">
+                    <a id="bookingSms" class="btn btn-primary" href="sms:+639471591378">
+                      <i class="fas fa-comment-sms me-2" aria-hidden="true"></i>Send via SMS
+                    </a>
+                    <a class="btn btn-outline-primary" href="tel:+639471591378">
+                      <i class="fas fa-phone me-2" aria-hidden="true"></i>Call 0947-159-1378
+                    </a>
+                    <button id="bookingCopy" type="button" class="btn btn-outline-primary">Copy details</button>
+                    <button id="bookingEdit" type="button" class="btn btn-link">Edit request</button>
+                  </div>
+                </div>
 
-    <!-- ================= CONTACTSSS ================= -->
-    <section id="contact" class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h1 class="fw-bold text-warning">Contact Us</h1>
-          <p class="text-muted fw-medium">Follow us on social media</p>
+                <div id="bookingStatus" class="booking-status text-center" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="p-4 bg-dark shadow-sm rounded text-center">
-              <p class="mb-4">
-                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                MAVIKKS BLDG., Upper Watson, 2nd Floor,<br />
-                San Miguel, Jordan, Guimaras
-              </p>
+      <!-- ================= CONTACT & MAP ================= -->
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-kicker">Visit us</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-lead">We'd love to hear from you. Find us in Jordan, Guimaras.</p>
+          </div>
 
-              <p class="mb-4">
-                <i class="fab fa-facebook-f text-primary"></i>
-                Sireenity Dental
-              </p>
-
-              <p class="mb-4">
-                <i class="fas fa-phone me-2 text-primary"></i>
-                0947-159-1378
-              </p>
-
-              <!-- Social Icons -->
-              <div class="d-flex justify-content-center gap-3">
-                <!-- Facebook -->
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="contact-card">
+                <ul class="contact-list">
+                  <li>
+                    <span class="contact-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                    <div>
+                      <strong>Address</strong>
+                      MAVIKKS BLDG., Upper Watson, 2nd Floor,<br />
+                      San Miguel, Jordan, Guimaras
+                    </div>
+                  </li>
+                  <li>
+                    <span class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                    <div>
+                      <strong>Phone</strong>
+                      <a href="tel:+639471591378">0947-159-1378</a>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="contact-icon"><i class="fab fa-facebook-f" aria-hidden="true"></i></span>
+                    <div>
+                      <strong>Facebook</strong>
+                      <a href="https://www.facebook.com/sireenity.dental" target="_blank" rel="noopener noreferrer">Sireenity Dental</a>
+                    </div>
+                  </li>
+                </ul>
                 <a
-                  href="fb://facewebmodal/f?href=https://www.facebook.com/sireenity.dental"
-                  class="social-icon facebook"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Facebook"
+                  class="btn btn-primary px-4"
+                  href="https://www.google.com/maps/dir/?api=1&amp;destination=10.60334135741877,122.58800680113455"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <i class="fab fa-facebook-f"></i>
+                  <i class="fas fa-diamond-turn-right me-2" aria-hidden="true"></i>Get directions
                 </a>
               </div>
             </div>
+            <div class="col-lg-7" id="mapSection">
+              <div id="leafletMap" role="region" aria-label="Map showing the clinic location"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- ================= CONTACTSSS 
-    <footer class="text-center p-4">
-      <h6>&copy; 2022 Sireenity Dental Clinic. <br>All rights reserved.</h5>
-    </footer>
-================= -->
-    <footer class="pt-5 mt-auto">
+    <!-- ================= FLOATING DIRECTIONS BUTTON ================= -->
+    <a
+      id="floatingDirections"
+      class="floating-directions"
+      href="https://www.google.com/maps/dir/?api=1&amp;destination=10.60334135741877,122.58800680113455"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fas fa-location-dot" aria-hidden="true"></i>Get Directions
+    </a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
       <div class="container">
-        <div class="row">
-          <!-- Brand -->
-          <div class="mb-4 text-center">
-            <h5 class="fw-bold">Sireenity Dental Clinic</h5>
-            <p class="small">
-              Experience the gentle difference.
-            </p>
-          </div>
-        </div>
-
-        <hr class="border-light opacity-35" />
-
-        <div class="mb-4 text-center">
-          <p class="small mb-2 mb-md-0 text-center text-dark">
-            © 2026 Sireenity Dental Clinic. All rights reserved.
-          </p>
-        </div>
+        <h2>Sireenity Dental Clinic &amp; Skinsense Aesthetic Center</h2>
+        <p class="small mb-0">Experience the gentle difference.</p>
+        <ul class="footer-links small">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#booking">Book an Appointment</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <hr />
+        <p class="small mb-0">&copy; 2026 Sireenity Dental Clinic. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const clinicLocation = [10.60334135741877, 122.58800680113455];
-        const mapSection = document.getElementById("mapSection");
-        const directionsBtn = document.getElementById("floatingDirections");
-
-        /* MAP */
-        const map = L.map("leafletMap", {
-          zoomControl: true,
-          scrollWheelZoom: false,
-        }).setView(clinicLocation, 19);
-
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution: "&copy; OpenStreetMap contributors",
-        }).addTo(map);
-
-        L.marker(clinicLocation)
-          .addTo(map)
-          .bindPopup(
-            "<b>Sireenity Dental Clinic</b><br>" +
-              "MAVIKKS BLDG., Upper Watson, 2nd Floor,<br>" +
-              "San Miguel, Jordan, Guimaras"
-          )
-          .openPopup();
-
-        setTimeout(() => map.invalidateSize(), 200);
-
-        /* GET DIRECTIONS */
-        directionsBtn.addEventListener("click", function () {
-          if (!navigator.geolocation) {
-            window.open(
-              "https://www.google.com/maps/dir/?api=1&destination=10.60334135741877, 122.58800680113455",
-              "_blank"
-            );
-            return;
-          }
-
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              const { latitude, longitude } = position.coords;
-              window.open(
-                `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=10.60334135741877, 122.58800680113455`,
-                "_blank"
-              );
-            },
-            () => {
-              window.open(
-                "https://www.google.com/maps/dir/?api=1&destination=10.60334135741877, 122.58800680113455",
-                "_blank"
-              );
-            }
-          );
-        });
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              directionsBtn.classList.toggle("show", entry.isIntersecting);
-            });
-          },
-          { threshold: 0.4 }
-        );
-
-        observer.observe(mapSection);
-      });
-    </script>
-
-    
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-      tooltipTriggerList.forEach((el) => {
-        new bootstrap.Tooltip(el);
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
